@@ -1,0 +1,12 @@
+{% extends 'webrequests/base.html' %}
+{% block title%}File Details{%endblock%}
+{% block body %}
+    <img src="{{file.upload_file }}" style="width: 250px;">
+
+    <h1>{{file.filename}}</h1>
+    <h2>{{file.file_type}}</h2>
+
+    {% if error_message %}
+        <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+{%endblock%}
